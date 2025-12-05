@@ -1,0 +1,5 @@
+nom = demande_texte ("nom : ")
+prenom = demande_texte("prenom : ")
+Argent = demand_texte("Argent : ")
+Inventaire = demande_texte("Inventaire : ")
+Sortiléges = demande_texte("Sortiléges : ")
