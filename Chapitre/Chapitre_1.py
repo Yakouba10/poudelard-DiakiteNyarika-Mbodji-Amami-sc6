@@ -2,25 +2,25 @@ def introduction():
     print ("Bonjour et bienvenue dans le jeu. L'histoire commence ... ")
 
 def creer_personnage():
-    personnage={}
-    personnage["nom_personnage"] = input("Entrez le nom du personnage : ")
-    personnage["prenom_personnage"] = input("Entrez le prénom du personnage : ")
-    personnage["note_courage"] = input("Entrez une valeur de 1 à 10 pour évaluer votre courage : ")
-    personnage["note_intelligence"] = input("Entrez une valeur de 1 à 10 pour évaluer votre intelligence : ")
-    personnage["note_loyaute"] = input("Entrez une valeur de 1 à 10 pour évaluer votre loyauté : ")
-    personnage["note_ambition"]= input("Entrez une valeur de 1 à 10 pour évaluer votre ambition : ")
+    attributs={}
+    nom = input("Entrez le nom du personnage : ")
+    prenom = input("Entrez le prénom du personnage : ")
+    attributs["note_courage"] = input("Entrez une valeur de 1 à 10 pour évaluer votre courage : ")
+    attributs["note_intelligence"] = input("Entrez une valeur de 1 à 10 pour évaluer votre intelligence : ")
+    attributs["note_loyaute"] = input("Entrez une valeur de 1 à 10 pour évaluer votre loyauté : ")
+    attributs["note_ambition"]= input("Entrez une valeur de 1 à 10 pour évaluer votre ambition : ")
 
-    return(personnage)
-
-def initialiser_personnage(personnage):
     print( "PROFIL DU PERSONNAGE \n\n"
-           "NOM : ", personnage["nom_personnage"] + "\n" +
-           "PRENOM : ", personnage["prenom_personnage"] + "\n\n " +
-           "QUALITES : \n"
-           "    COURAGE : ", personnage["note_courage"] + "\n" +
-           "    INTELLIGENCE : ", personnage["note_intelligence"] + "\n" +
-           "    LOYAUTE : ", personnage["note_loyaute"] + "\n"
-           "    AMBITION : ", personnage["note_ambition"])
+           "NOM : ", nom + "\n" +
+           "PRENOM : ", prenom + "\n\n " +
+           "ATTRIBUTS : \n"
+           "    COURAGE : ", attributs["note_courage"] + "\n" +
+           "    INTELLIGENCE : ", attributs["note_intelligence"] + "\n" +
+           "    LOYAUTE : ", attributs["note_loyaute"] + "\n"
+           "    AMBITION : ", attributs["note_ambition"])
+
+    return(nom, prenom, attributs)
+
 
 def recevoir_lettre():
     print("Une chouette traverse la fenêtre et vous apporte une lettre scellée du sceau de Poudlard…"
@@ -36,10 +36,11 @@ def recevoir_lettre():
               "Le monde magique ne saura jamais que vous existiez... \nFin du jeu !")
         exit(0)
 
-def rencontrer_hagrid(personnage):
-    print(" Hagrid : Salut "+personnage["prenom_personnage"]+". Je suis venu t'aider à faire tes achats sur le chemin de Traverse.\n\n"
+def rencontrer_hagrid():
+    print(" Hagrid : Salut. Je suis venu t'aider à faire tes achats sur le chemin de Traverse.\n\n"
                                                             "Voulez vous suivre Hagrid ?\n\n1. Oui\n\n2. Non")
     reponse=input()
     if reponse != "1" and reponse != "2": exit()
     if reponse == "2": print("\nFais moi confiance tu dois me suivre, tu ne le regrettera pas !")
+
 
