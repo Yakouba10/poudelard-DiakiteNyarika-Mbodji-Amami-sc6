@@ -35,3 +35,11 @@ def recevoir_lettre():
         print("\n\n Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie: « EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! » "
               "Le monde magique ne saura jamais que vous existiez... \nFin du jeu !")
         exit(0)
+
+def rencontrer_hagrid(personnage):
+    print(" Hagrid : Salut "+personnage["prenom_personnage"]+". Je suis venu t'aider à faire tes achats sur le chemin de Traverse.\n\n"
+                                                            "Voulez vous suivre Hagrid ?\n\n1. Oui\n\n2. Non")
+    reponse=input()
+    if reponse != "1" and reponse != "2": exit()
+    if reponse == "2": print("\nFais moi confiance tu dois me suivre, tu ne le regrettera pas !")
+
