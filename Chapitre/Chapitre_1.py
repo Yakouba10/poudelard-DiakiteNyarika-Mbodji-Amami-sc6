@@ -21,3 +21,17 @@ def initialiser_personnage(personnage):
            "    INTELLIGENCE : ", personnage["note_intelligence"] + "\n" +
            "    LOYAUTE : ", personnage["note_loyaute"] + "\n"
            "    AMBITION : ", personnage["note_ambition"])
+
+def recevoir_lettre():
+    print("Une chouette traverse la fenêtre et vous apporte une lettre scellée du sceau de Poudlard…"
+          "\n\n« Cher élève nous avons le plaisir de vous informer que vous avez été admis à l’école de sorcellerie de Poudlard ! »"
+            "\n\nSouhaitez-vous accepter cette invitation et partir pour Poudlard ?"+"\n1. Oui, bien sûr !\n2. Non, je préfère rester avec l’oncle Vernon…")
+
+    reponse = input()
+    if reponse != "1" and reponse != "2":
+        exit('Mauvaise saisie. Fin du jeu')
+
+    if reponse == "2":
+        print("\n\n Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie: « EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! » "
+              "Le monde magique ne saura jamais que vous existiez... \nFin du jeu !")
+        exit(0)
