@@ -57,3 +57,7 @@ def ajouter_objet(joueur, cle, objet):
         print("Erreur : clé invalide (doit être 'Inventaire' ou 'Sortilèges').")
         return
 
+
+    (joueur[cle].append(objet))
+
+
