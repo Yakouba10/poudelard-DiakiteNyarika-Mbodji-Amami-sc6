@@ -36,3 +36,24 @@ def afficher_personnage(joueur):
         else:
             print(f"{cle} : {valeur}")
 
+
+
+def modifier_argent(joueur, montant):
+    """
+    Ajoute (ou retire) un montant au joueur.
+    montant peut être positif ou négatif.
+    """
+    joueur["Argent"] += montant
+
+
+
+def ajouter_objet(joueur, cle, objet):
+    """
+    Ajoute un objet dans Inventaire ou Sortilèges.
+    cle doit être 'Inventaire' ou 'Sortilèges'.
+    objet est une chaîne.
+    """
+    if cle not in ["Inventaire", "Sortilèges"]:
+        print("Erreur : clé invalide (doit être 'Inventaire' ou 'Sortilèges').")
+        return
+
