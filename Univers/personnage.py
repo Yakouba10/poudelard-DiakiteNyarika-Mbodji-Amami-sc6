@@ -15,23 +15,21 @@ def initialiser_personnage(nom, prenom, attributs):
 
 def afficher_personnage(joueur):
    
-    print("Profil du personnage :")
+    print("**** PROFIL DU PERSONNAGE **** ")
 
     for cle, valeur in joueur.items():
         if isinstance(valeur, dict):
-            print(f"{cle} :")
+            print(f"\n{cle} :")
             for scle, sval in valeur.items():
                 print(f" - {scle} : {sval}")
 
         elif isinstance(valeur, list):
             contenu = ", ".join(str(x) for x in valeur)
-            print(f"{cle} : {contenu}")
+            print(f"\n{cle} : {contenu}")
 
         else:
-            print(f"{cle} : {valeur}")
-
-
-
+            print(f"\n{cle} : {valeur}")
+            
 def modifier_argent(joueur, montant):
    
     joueur["Argent"] += montant
