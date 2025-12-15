@@ -1,7 +1,7 @@
 def initialiser_personnage(nom, prenom, attributs):
 
 
-    personage={
+    personnage={
         "nom": nom,
         "prenom": prenom,
         "attributs": attributs,
@@ -10,7 +10,7 @@ def initialiser_personnage(nom, prenom, attributs):
         "Sortiléges": []
 
     }
-    return personage
+    return personnage
 
 
 def afficher_personnage(joueur):
