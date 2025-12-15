@@ -10,17 +10,7 @@ def creer_personnage():
     attributs["note_loyaute"] = input("Entrez une valeur de 1 à 10 pour évaluer votre loyauté : ")
     attributs["note_ambition"]= input("Entrez une valeur de 1 à 10 pour évaluer votre ambition : ")
 
-    print( "PROFIL DU PERSONNAGE \n\n"
-           "NOM : ", nom + "\n" +
-           "PRENOM : ", prenom + "\n\n " +
-           "ATTRIBUTS : \n"
-           "    COURAGE : ", attributs["note_courage"] + "\n" +
-           "    INTELLIGENCE : ", attributs["note_intelligence"] + "\n" +
-           "    LOYAUTE : ", attributs["note_loyaute"] + "\n"
-           "    AMBITION : ", attributs["note_ambition"])
-
     return(nom, prenom, attributs)
-
 
 def recevoir_lettre():
     print("Une chouette traverse la fenêtre et vous apporte une lettre scellée du sceau de Poudlard…"
@@ -42,5 +32,6 @@ def rencontrer_hagrid():
     reponse=input()
     if reponse != "1" and reponse != "2": exit()
     if reponse == "2": print("\nFais moi confiance tu dois me suivre, tu ne le regrettera pas !")
+
 
 
