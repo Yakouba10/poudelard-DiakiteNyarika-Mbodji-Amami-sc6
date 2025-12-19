@@ -32,7 +32,7 @@ joueur = {
 questions = [
     (
         "Tu vois un ami en danger. Que fais-tu ?",
-        ["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l'aide" , "calme et j'observe"]
+        ["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l'aide" , "calme et j'observe"],
         ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
     ),
     (
@@ -54,3 +54,6 @@ def repartition_maison(joueur, questions) :
         "Poufsouffle": 0,
         "Serpentard": 0
     }
+
+
+
