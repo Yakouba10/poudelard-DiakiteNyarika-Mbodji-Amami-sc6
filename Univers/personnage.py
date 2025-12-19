@@ -24,7 +24,6 @@ def afficher_personnage(joueur):
             print(f"{cle} :")
             for scle, sval in valeur.items():
                 print(f" - {scle} : {sval}")
-
         elif isinstance(valeur, list):
             contenu = ", ".join(str(x) for x in valeur)
             print(f"{cle} : {contenu}")
