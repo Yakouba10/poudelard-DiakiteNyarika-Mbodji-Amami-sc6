@@ -77,6 +77,37 @@ def rencontrer_amis(joueur):
 
 
 
+def installation_salle_commune(joueur):
+    maisons = load_fichier("data/maisons.json")
+    maison = joueur["Maison"]
+
+    infos = maisons.get(maison)
+    if not infos:
+        print("Erreur : maison introuvable.")
+        return
+
+    print("\nVous suivez les préfets à travers les couloirs du château...")
+    print(infos["description"])
+    print(infos["message"])
+    print("Couleurs de la maison :", ", ".join(infos["couleurs"]))
+
+
+def lancer_chapitre_2(personnage):
+    print("\n========== CHAPITRE 2 : Le voyage vers Poudlard ==========")
+
+    rencontrer_amis(personnage)
+    mot_de_bienvenue()
+    ceremonie_repartition(personnage)
+    installation_salle_commune(personnage)
+
+    print("\nRésumé de ton personnage à la fin du chapitre 2 :")
+    afficher_personnage(personnage)
+
+    print("\nFin du Chapitre 2 ! Les cours à Poudlard vont bientôt commencer...\n")
+
+
+
+
 
 
 
