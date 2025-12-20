@@ -22,12 +22,7 @@ def afficher_maison_gagnante(maisons) :
         print(f" liste_gagnante[0] a gagné")
     else :
         print("Egalité entre ", *liste_gagnante, sep=" ,")
-joueur = {
-"courage" : 0,
-"intelligence" : 0,
-"loyauté" : 0,
-"ambition" : 0
-}
+
 
 questions = [
     (
@@ -54,6 +49,24 @@ def repartition_maison(joueur, questions) :
         "Poufsouffle": 0,
         "Serpentard": 0
     }
+    scores["Gryffondor"] += joueur["courage"] * 2
+    scores["Serpentard"] += joueur["ambition"] * 2
+    scores["Poufsouffle"] += joueur["loyaute"] * 2
+    scores["Serdaigle"] += joueur["intelligence"] * 2
+    for question, choix, maisons in questions:
+        print(question)
+        print("1.", choix[0])
+        print("2.", choix[1])
+        print("3.", choix[2])
+        print("4.", choix[3])
+
+        reponse = int(input("Ton choix : "))
+        maison = maisons[reponse - 1]
+        scores[maison] = scores[maison] + 3
+        print()
+        maison_finale = max(scores, key=scores.get)
+
+        return maison_finale
 
 
 
