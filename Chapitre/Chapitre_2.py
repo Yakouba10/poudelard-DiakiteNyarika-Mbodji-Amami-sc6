@@ -46,6 +46,47 @@ def rencontrer_amis(joueur):
     print("\nAttributs mis à jour :", joueur["Attributs"])
 
 
+    def mot_de_bienvenue():
+        print("\nDumbledore prend la parole dans la Grande Salle.")
+        print("« Bienvenue à Poudlard. Que cette année soit riche en découvertes. »")
+        input("\nAppuyez sur Entrée pour continuer...")
+
+        def ceremonie_repartition(joueur):
+            print("\nLa cérémonie de répartition commence...")
+            print("Le Choixpeau magique te pose plusieurs questions...\n")
+
+            questions = [
+                ( "Tu vois un ami en danger. Que fais-tu ?",
+                    ["Je fonce l'aider", "Je réfléchis à un plan",
+                     "Je cherche de l’aide", "Je reste calme et j’observe"],
+                    ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]),
+                ("Quel trait te décrit le mieux ?",
+                    ["Courageux et loyal", "Rusé et ambitieux",
+                     "Patient et travailleur", "Intelligent et curieux"],
+                    ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"] ),
+                ( "Face à un défi difficile, tu...",
+                    ["Fonces sans hésiter", "Cherches la meilleure stratégie",
+                     "Comptes sur tes amis", "Analyses le problème"],
+                    ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]) ]
+
+            maison = repartition_maison(joueur, questions)
+            joueur["Maison"] = maison
+
+            print(f"\nLe Choixpeau s’exclame : {maison} !!!")
+            print(f"Tu rejoins la maison {maison} sous les applaudissements !")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
