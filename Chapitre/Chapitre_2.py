@@ -1,13 +1,12 @@
-from utils.input_utils import demander_choix, load_fichier
-from univers.maison import repartition_maison
-from univers.personnage import afficher_personnage
-
+import utils.input_utils
+import univers.maison
+import univers.personnage
 
 def rencontrer_amis(joueur):
     print("\nVous montez à bord du Poudlard Express...\n")
 
     print("— Salut ! Moi c’est Ron Weasley. Tu veux bien qu’on s’assoie ensemble ?")
-    choix = demander_choix(
+    choix = utils.input_utils.demander_choix(
         "Que répondez-vous ?",
         ["Bien sûr, assieds-toi !", "Désolé, je préfère voyager seul."]
     )
@@ -18,7 +17,7 @@ def rencontrer_amis(joueur):
         joueur["Attributs"]["ambition"] += 1
 
     print("\n— Bonjour, je m’appelle Hermione Granger. Vous avez déjà lu ‘Histoire de la Magie’ ?")
-    choix = demander_choix(
+    choix = utils.input_utils.demander_choix(
         "Que répondez-vous ?",
         ["Oui, j’adore apprendre de nouvelles choses !",
          "Euh… non, je préfère les aventures aux bouquins."]
@@ -30,7 +29,7 @@ def rencontrer_amis(joueur):
         joueur["Attributs"]["courage"] += 1
 
     print("\n— Je suis Drago Malefoy. Mieux vaut bien choisir ses amis dès le départ, tu ne crois pas ?")
-    choix = demander_choix(
+    choix = utils.input_utils.demander_choix(
         "Comment réagissez-vous ?",
         ["Je lui serre la main poliment.",
          "Je l’ignore complètement.",
@@ -45,6 +44,8 @@ def rencontrer_amis(joueur):
         joueur["Attributs"]["courage"] += 1
 
     print("\nAttributs mis à jour :", joueur["Attributs"])
+
+
 
 
 
