@@ -19,7 +19,7 @@ def recevoir_lettre():
 
     reponse = demander_choix("Une chouette traverse la fenêtre et vous apporte une lettre scellée du sceau de Poudlard…"
           "\n\n« Cher élève nous avons le plaisir de vous informer que vous avez été admis à l’école de sorcellerie de Poudlard ! »"
-            "\n\nSouhaitez-vous accepter cette invitation et partir pour Poudlard ?",["\n1. Oui, bien sûr !","\n2. Non, je préfère rester avec l’oncle Vernon…"])
+            "\n\nSouhaitez-vous accepter cette invitation et partir pour Poudlard ?",["\nOui, bien sûr !","\nNon, je préfère rester avec l’oncle Vernon…"])
 
     if reponse == "2":
         print("\n\n Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie: « EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! » "
@@ -29,8 +29,9 @@ def recevoir_lettre():
 def rencontrer_hagrid():
 
     reponse=demander_choix(" Hagrid : Salut. Je suis venu t'aider à faire tes achats sur le chemin de Traverse.\n\n"
-                                                            "Voulez vous suivre Hagrid ?", ["1. Oui","2. Non"])
+                                                            "Voulez vous suivre Hagrid ?", ["Oui","Non"])
     if reponse == "2": print("\nFais moi confiance tu dois me suivre, tu ne le regrettera pas !")
+
 
 
 
