@@ -79,8 +79,10 @@ def chapitre1():
     recevoir_lettre()
     rencontrer_hagrid()
     acheter_fournitures(perso)
+    return(perso)
 
     print("\nFin du Chapitre 1 ! Votre aventure commence à Poudlard..")
+
 
 
 
