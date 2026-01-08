@@ -44,3 +44,32 @@ def tentative_marque(equipe_attaque, equipe_defense, joueur_est_joueur=False):
     else:
         equipe_defense["a_stoppe"] = equipe_defense["a_stoppe"] + 1
         print(equipe_defense["nom"], "bloque l'attaque !")
+
+
+
+def apparition_vifdor():
+
+    tirage = random.randint(1, 6)
+
+    if tirage == 6:
+        return True
+    else:
+        return False
+
+def attraper_vifdor(e1, e2):
+
+    equipe_gagnante = random.choice([e1, e2])
+
+    equipe_gagnante["score"] = equipe_gagnante["score"] + 150
+    equipe_gagnante["attrape_vifdor"] = True
+
+    print(equipe_gagnante["nom"], "attrape le Vif d'Or ! (+150 points)")
+
+    return equipe_gagnante
+
+
+def afficher_score(e1, e2):
+  
+    print("\n *** SCORE ACTUEL ***")
+    print(e1["nom"], ":", e1["score"], "points")
+    print(e2["nom"], ":", e2["score"], "points")
