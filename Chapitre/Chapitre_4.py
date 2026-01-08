@@ -23,3 +23,24 @@ def creer_equipe(maison, equipe_data, est_joueur=False, joueur=None):
         equipe["joueurs"] = liste_joueur2
 
     return equipe
+
+
+def tentative_marque(equipe_attaque, equipe_defense, joueur_est_joueur=False):
+
+    proba_but = random.randint(1, 10)
+    if proba_but >= 6:
+
+        if joueur_est_joueur:
+            buteur = equipe_attaque["joueurs"][0]
+        else:
+            buteur = random.choice(equipe_attaque["joueurs"])
+
+        equipe_attaque["score"] = equipe_attaque["score"] + 10
+        equipe_attaque["a_marque"] = equipe_attaque["a_marque"] + 1
+
+        print(buteur, "marque un but pour", equipe_attaque["nom"], "! (+10 points)")
+
+
+    else:
+        equipe_defense["a_stoppe"] = equipe_defense["a_stoppe"] + 1
+        print(equipe_defense["nom"], "bloque l'attaque !")
