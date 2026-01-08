@@ -73,3 +73,10 @@ def afficher_score(e1, e2):
     print("\n *** SCORE ACTUEL ***")
     print(e1["nom"], ":", e1["score"], "points")
     print(e2["nom"], ":", e2["score"], "points")
+
+def afficher_equipe(maison, equipe):
+
+    print("\nÉquipe de", maison)
+    for joueur in equipe["joueurs"]:
+        print(joueur)
+
